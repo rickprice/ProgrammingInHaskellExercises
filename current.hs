@@ -45,6 +45,7 @@ myqsortTest (x : xs) = myqsort smaller ++ [x] ++ myqsort larger
     larger = [b | b <- xs, b >= x]
 
 -- This is a proper recursive solution it would seem
+-- This was adapted from: https://stackoverflow.com/questions/13784671/simple-haskell-splitlist
 splitlist :: [a] -> ([a], [a])
 splitlist xs = f xs xs
   where
