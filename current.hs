@@ -52,5 +52,5 @@ splitlist xs = f xs xs
     f (y : ys) (_ : _ : zs) =
       let (as, bs) = f ys zs
        in (y : as, bs)
-    f (y : ys) (_ : []) = ([y], ys)
+    f (y : ys) [_] = ([y], ys)
     f ys [] = ([], ys)
